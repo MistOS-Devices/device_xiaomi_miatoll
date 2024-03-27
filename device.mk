@@ -192,7 +192,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     ApertureMiatoll \
-    LineageSDKMiatoll
+    LineageSDKMiatoll \
+    SettingsOverlayMiatoll
 
 # Partitions
 PRODUCT_PACKAGES += \
