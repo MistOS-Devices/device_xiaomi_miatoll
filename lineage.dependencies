@@ -12,7 +12,7 @@
     "branch": "16.2"
   },
   {
-    "repository": "arshad-jamil33/android_kernel_xiaomi_sm6250",
+    "repository": "arshad-jamil33/xiaomi_kernel_sm6250",
     "target_path": "kernel/xiaomi/sm6250",
     "remote": "github-non-los",
     "branch": "16.2"
@@ -20,6 +20,18 @@
   {
     "repository": "arshad-jamil33/hardware_dolby_moto",
     "target_path": "hardware/dolby",
+    "remote": "github-non-los",
+    "branch": "16.2"
+  },
+  {
+    "repository": "arshad-jamil33/android_device_xiaomi_miuicamera-miatoll",
+    "target_path": "device/xiaomi/miuicamera-miatoll",
+    "remote": "github-non-los",
+    "branch": "16.2"
+  },
+  {
+    "repository": "arshad-jamil33/android_vendor_xiaomi_miuicamera-miatoll",
+    "target_path": "vendor/xiaomi/miuicamera-miatoll",
     "remote": "github-non-los",
     "branch": "16.2"
   }
