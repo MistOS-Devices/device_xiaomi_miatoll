@@ -33,6 +33,5 @@
     "repository": "arshad-jamil33/android_vendor_xiaomi_miuicamera-miatoll",
     "target_path": "vendor/xiaomi/miuicamera-miatoll",
     "remote": "github",
-    "branch": "16.2"
   }
 ]
