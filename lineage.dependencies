@@ -18,7 +18,7 @@
     "branch": "16.2"
   },
   {
-    "repository": "arshad-jamil33/hardware_dolby_moto",
+    "repository": "arshad-jamil33/hardware_dolby_sony",
     "target_path": "hardware/dolby",
     "remote": "github",
     "branch": "16.2"
