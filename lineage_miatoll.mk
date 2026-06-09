@@ -32,7 +32,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=Redmi/miatoll_global/miatoll:12/RKQ1.211019.001/V14.0.3.0.SJZMIXM:user/release-keys
 
 #Mistify
-
 # Set maintainer
 MISTOS_MAINTAINER := KimChi
 
@@ -49,3 +48,7 @@ TARGET_ENABLE_BLUR := true
 # Enable features
 TARGET_SUPPORTS_QUICK_TAP := true
 BYPASS_CHARGE_SUPPORTED := true
+
+# Flags
+TARGET_INCLUDES_OEM_App := true
+TARGET_INCLUDES_DolbyVision := true
