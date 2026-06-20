@@ -68,7 +68,6 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 # Jemalloc
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/hidl/c2_manifest_vendor.xml
 
 # Kernel
