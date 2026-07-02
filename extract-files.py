@@ -74,16 +74,17 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_register_dma_handle')
         .clear_symbol_version('remote_register_buf_attr')
         .clear_symbol_version('remote_register_buf'),
-    ('vendor/lib64/hw/camera.qcom.so', 'vendor/lib64/libFaceDetectpp-0.5.2.so', 'vendor/lib64/libfacedet.so'): blob_fixup()
-        .replace_needed('libmegface.so', 'libfacedet.so')
-        .replace_needed('libMegviiFacepp-0.5.2.so', 'libFaceDetectpp-0.5.2.so')
-        .replace_needed('megviifacepp_0_5_2_model', 'facedetectpp_0_5_2_model'),
+    'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
+        .replace_needed('libaudioclient.so', 'libaudiobase.so'),
+    'system_ext/lib64/libwfdservice.so': blob_fixup()
+        .add_needed('libaudiobase.so')
+        .replace_needed('android.media.audio.common.types-V4-cpp.so', 'android.media.audio.common.types-V5-cpp.so'),
+    'vendor/lib64/libdpps.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
-    'vendor/lib64/libdpps.so': blob_fixup()
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
