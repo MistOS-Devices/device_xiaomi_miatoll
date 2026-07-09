@@ -88,9 +88,31 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
+# Dex2oat
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.dex2oat-cpu-set=4,5,6,7 \
+    dalvik.vm.dex2oat-threads=4 \
+    dalvik.vm.image-dex2oat-cpu-set=4,5,6,7 \
+    dalvik.vm.image-dex2oat-threads=4
+
+# Dex-preopt/ART
+ifeq ($(TARGET_BUILD_VARIANT),user)
+ART_BUILD_HOST_DEBUG := false
+ART_BUILD_HOST_NDEBUG := false
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_TARGET_NDEBUG := false
+DONT_DEXPREOPT_PREBUILTS := true
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything-profile
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_OTHER_JAVA_DEBUG_INFO := false
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := everything
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+USE_DEX2OAT_DEBUG := false
+WITH_DEXPREOPT_DEBUG_INFO := false
+endif
+>>>>>>> c37a5c1 (miatoll: fastbootd is now enabled by default)
 
 # Fingerprint
 PRODUCT_PACKAGES += \
