@@ -86,6 +86,10 @@ TARGET_KERNEL_CONFIG := vendor/xiaomi/miatoll_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6250
 TARGET_KERNEL_CLANG_VERSION := r563880c
 TARGET_KERNEL_NO_GCC := true
+BOARD_VENDOR_KERNEL_HEADER += \
+    kernel/xiaomi/sm6250/include/uapi \
+    kernel/xiaomi/sm6250/techpack/audio/include/uapi \
+    kernel/xiaomi/sm6250/techpack/audio//4.0/include/uapi
 
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
