@@ -88,6 +88,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+
 # Dex2oat
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat-cpu-set=4,5,6,7 \
@@ -111,8 +112,6 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := everything
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
-endif
->>>>>>> c37a5c1 (miatoll: fastbootd is now enabled by default)
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -161,6 +160,9 @@ PRODUCT_PACKAGES += \
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
+
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -213,7 +215,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     ApertureMiatoll \
-    LineageSDKMiatoll
+    LineageSDKMiatoll \
+    SettingsOverlayMiatoll
 
 # Partitions
 PRODUCT_PACKAGES += \
@@ -278,10 +281,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-# QTI fwk-detect
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti.vendor # Needed by CNE app
-
 # Rootdir
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
@@ -333,6 +332,10 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
+
+# Thermal Engine
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map.conf \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-map-curtana.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map-curtana.conf \
@@ -348,7 +351,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-normal-joyeuse.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal-joyeuse.conf \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-camera-joyeuse.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-camera-joyeuse.conf
 
-# Thermal HAL
+# TimeKeep
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
