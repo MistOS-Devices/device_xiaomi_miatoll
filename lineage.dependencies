@@ -1,38 +1,38 @@
 [
   {
-    "repository": "arshad-jamil33/vendor_xiaomi_miatoll",
+    "repository": "MistOS-Devices/vendor_xiaomi_miatoll",
     "target_path": "vendor/xiaomi/miatoll",
-    "branch": "16.2",
+    "branch": "17",
     "remote": "github"
   },
   {
     "repository": "arshad-jamil33/android_hardware_xiaomi",
     "target_path": "hardware/xiaomi",
     "remote": "github",
-    "branch": "16.2"
+    "branch": "17"
   },
   {
-    "repository": "arshad-jamil33/xiaomi_kernel_sm6250",
+    "repository": "arshad-jamil33/kernel_xiaomi_miatoll-bpf",
     "target_path": "kernel/xiaomi/sm6250",
     "remote": "github",
-    "branch": "16.2"
+    "branch": "17"
   },
   {
-    "repository": "arshad-jamil33/hardware_dolby_hyper",
+    "repository": "arshad-jamil33/hardware_dolby-sony",
     "target_path": "hardware/dolby",
     "remote": "github",
-    "branch": "16.2"
+    "branch": "17"
   },
   {
     "repository": "arshad-jamil33/android_device_xiaomi_miuicamera-miatoll",
     "target_path": "device/xiaomi/miuicamera-miatoll",
     "remote": "github",
-    "branch": "16.2"
+    "branch": "17"
   },
   {
     "repository": "arshad-jamil33/android_vendor_xiaomi_miuicamera-miatoll",
     "target_path": "vendor/xiaomi/miuicamera-miatoll",
     "remote": "github",
-    "branch": "16.2"
+    "branch": "17"
   }
 ]
